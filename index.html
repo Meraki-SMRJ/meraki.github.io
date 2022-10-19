@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERAKI ~ 2022 Chapter 3</title>
+
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="Logo"> <img src="/assets/SchoolLogo_Transparent.png" alt="Logo"> </a>
+        <div class="Toggle"> <img src="/assets/Toggle.png" alt="ToggleMenu"> </div>
+    </header>
+
+    <div class="Banner">
+        <div class="Content">
+            <h2> <span> M E R A K I ~ </span> Chapter 3 - 2022 </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus, sequi delectus expedita dolorem placeat, consectetur dolore tempore magni minima illo praesentium, fugit eum. Praesentium quaerat voluptas perferendis laboriosam asperiores nihil ratione, eligendi sunt nam aliquam, maxime sequi fugiat! Quas quibusdam ipsum eveniet expedita soluta repudiandae magni quasi perferendis. Doloribus.</p>
+            <a href="#" class="TeaserPlay" onclick="toggle();"> <img src="/assets/TeaserPlay.png" alt="TeaserPlayButton"> Watch Teaser </a>
+            
+            <div class="Slide"></div>
+
+            <ul class="SocialMediaIcons">
+                <li> <a href="#"> <img src="/assets/Facebook.png" alt="FacebookIcon"> </a></li>
+                <li> <a href="#"> <img src="/assets/Instagram.png" alt="InstagramIcon"> </a></li>
+                <li> <a href="#"> <img src="/assets/Twitter.png" alt="TwitterIcon"> </a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="Teaser">
+        <video src="/assets/Render_1.mp4" controls="true"></video>
+        <img class="TeaserClose" src="/assets/Close.png" onclick="toggle();">
+    </div>
+    
+    <script type="text/javascript">
+        function toggle(){
+            var Teaser = document.querySelector('.Teaser');
+            var video = document.querySelector('video');
+            Teaser.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+</body>
+
+</html>
