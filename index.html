@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter School Jaipuria Fest</title>
+
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="icon" href="/assets/SMRJ.png" type="image/icon type">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="Logo"> <img src="/assets/SchoolLogo_Transparent.png" alt="Logo"> </a>
+        <div class="Slide"></div>
+    </header>
+
+    <div class="Banner">
+        <div class="Content">
+            <h2> Inter-School <span> JAIPURIA Fest ~</span> </h2>
+            <p>We welcome you to the marvelous Inter-School Jaipuria fest, a three-day fun-filled vivacious event filled with once-in-a-lifetime opportunities for students to engross themselves in captivating and enthralling events. The three happening days of this fest will include:-
+                <br>1st Day- Meraki
+                <br>2nd Day- Yogoutsav & Ciencia
+                <br>3rd Day- Techvista & Bhavani Bharti
+                <br>This event will not only cater to students' enjoyment but also form an integral part of their learnings that will come useful to them throughout their entire life. As it is said-
+
+                "Learning is a treasure that will follow its owner everywhere."
+            </p>
+            <div class="BtnContainer">
+                <div class="Btns">
+                    <a href="#" class="Btn BtnMain" onclick="toggle();"> Watch Teaser</a>
+                </div>
+            </div>
+            <br><br><hr><br><br>
+            <h1> <span>Meraki </span></h1>
+            <p> Meraki invites students to showcase their dormant talents with the same zeal and virtuosity, similar to
+                last year. It includes fantastic literary and mathematical events that give students a once in a
+                lifetime opportunity to exhibit their talents and learn whilst they participate. Meraki will not only
+                have intellect in store for for students but also inquisitiveness. It is all about enthusiasm to
+                participate and learnings imparted. It is just one step away, get registered! </p>
+            <div class="BtnContainer">
+                <div class="Btns">
+                    <a href="/script/turnjs4/samples/basic/index.html" target="_blank" class="Btn BtnMain"> Read
+                        Brochure</a>
+                </div>
+            </div>
+
+            <br><hr><br>
+            <h1> <span>Yogoutsav</span></h1>
+            <p> Yoga boasts its nonchalence and with its suavity, boosts the yogi's intellect, flexibility and overall
+                resilience. Yogoutsav celebrates the brilliance of yoga and its astounding benefits. This event will
+                rouse student's interest for the fabulous art of yoga.
+            </p>
+            <div class="BtnContainer">
+                <div class="Btns">
+                    <a href="/script/turnjs4/samples/basic/index2.html" target="_blank" class="Btn BtnMain"> Read
+                        Brochure</a>
+                </div><br><br>
+            </div>
+
+                <!--<div class="TimerContainer">
+                <div class="StartTime">
+                    <div>
+                        <p>20</p>
+                        <span>Days</span>
+                        <p>3</p>
+                        <span>Hours</span>
+                        <p>12</p>
+                        <span>Minutes</span>
+                        <p>23</p>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+            </div>-->
+                <!--
+            <ul class="SocialMediaIcons">
+                <li> <a href="#"> <img src="/WEBSITE/assets/Facebook.png" alt="FacebookIcon"> </a></li>
+                <li> <a href="#"> <img src="/WEBSITE/assets/Instagram.png" alt="InstagramIcon"> </a></li>
+                <li> <a href="#"> <img height="80px" width="80px" margin-bottom="-100px" src="/WEBSITE/assets/Youtube.png" alt="YoutubeIcon"> </a></li>
+            </ul>
+
+        </div>
+    </div>-->
+
+                <div class="Teaser">
+                    <video src="https://res.cloudinary.com/dvvuhsqjt/video/upload/v1666288670/helo/teaser1_z7jnu4.mp4"
+                        controls="true"></video>
+                    <img class="TeaserClose" src="/assets/Close.png" onclick="toggle();">
+                </div>
+                  <!-- Site footer -->
+                  <br><hr><br>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+           <a href="https://www.sethmrjaipuria.school/">Seth M.R. Jaipuria Schools.</a>
+              </p>
+            </div>
+  </footer>
+
+                <script type="text/javascript">
+                    function toggle() {
+                        var Teaser = document.querySelector('.Teaser');
+                        var video = document.querySelector('video');
+                        Teaser.classList.toggle('active')
+                        video.currentTime = 0;
+                        video.pause();
+                    }
+                </script>
+
+</body>
+
+</html>
