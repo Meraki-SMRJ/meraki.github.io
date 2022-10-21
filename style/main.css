@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', serif;
+}
+
+html,
+body {
+    background: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+
+header .Logo {
+    max-width: 120px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+header .Toggle {
+    max-width: 60px;
+    cursor: pointer;
+}
+
+header .Toggle img {
+    filter: invert(1);
+}
+
+header .Logo img,
+header .Toggle img {
+    max-width: 100%;
+}
+
+.Banner {
+    position: relative;
+    min-height: 100vh;
+    margin: 25px auto;
+    min-width: 100%;
+    padding: 0 30px;
+    background: linear-gradient();
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.Banner .Content h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #000;
+    transition: all 0.5s ease-in-out;
+}
+
+.Banner .Content h2 span {
+    font-weight: 800;
+    transition: all 0.5s ease-in-out;
+}
+
+.Banner .Content p {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #000;
+    margin: 15px 0 35px;
+    transition: all 0.5s ease-in-out;
+}
+
+.BtnContainer {
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.Btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+}
+
+.Btn {
+    text-decoration: none;
+    position: relative;
+    margin: 10px;
+    font-size: 1.2em;
+    color: #000;
+    display: inline-block;
+    border: 2px solid #000;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: all 0.5s ease-in-out;
+}
+
+.BtnMain {
+    background: #000;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.BtnMain:hover {
+    background: transparent;
+    color: #000;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+.BtnMain:before,
+.BtnMain:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #000;
+    transition: 400ms ease all;
+}
+
+.BtnMain:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.BtnMain:hover:before,
+.BtnMain:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+/*
+.Button img {
+    margin-right: 10px;
+    max-width: 50px;
+    filter: invert(1);
+}
+*/
+
+.SocialMediaIcons {
+    position: fixed;
+    display: inline-flex;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SocialMediaIcons li {
+    list-style: none;
+}
+
+.SocialMediaIcons li a {
+    text-decoration: none;
+}
+
+.SocialMediaIcons li a img {
+    transform: scale(0.6);
+}
+
+.Slide {
+    position: relative;
+    width: 120px;
+    /* 5:2 hai yeh */
+    height: 80px;
+    background: url(/assets/Meraki_New.jpg);
+    background-size: cover;
+    cursor: pointer;
+    animation: Animate_Meraki_Logo 25s linear infinite;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes Animate_Meraki_Logo {
+
+    0%,
+    100% {
+        background-position: top;
+    }
+
+    50% {
+        background-position: bottom;
+    }
+}
+
+.Teaser {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000000;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+.Teaser.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.Teaser video {
+    max-width: 900px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.Teaser .TeaserClose {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    max-width: 32px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+@media (max-width: 1130px) {
+
+    header {
+        padding: 20px 50px;
+    }
+
+    header .Logo {
+        max-width: 80px;
+    }
+
+    header .ToggleMenu {
+        max-width: 40px;
+    }
+
+    .Banner .Content h2 {
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+    }
+
+    .Banner .Content h2 span {
+        font-weight: 800;
+    }
+
+    .Banner .Content p {
+        font-size: 1em;
+    }
+
+    .SocialMediaIcons {
+        position: absolute;
+        top: initial;
+        right: initial;
+        margin-top: 40px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .Slide li {
+        list-style: none;
+        margin: 0 5px;
+    }
+
+    .Teaser video {
+        max-width: 90%;
+        outline: none;
+    }
+
+    .Btn {
+        text-decoration: none;
+        position: relative;
+        margin: 10px;
+        font-size: 1em;
+        color: #000;
+        display: inline-block;
+        border: 2px solid #000;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .BtnMain {
+        background: #000;
+        color: #fff;
+        padding: 5px 20px;
+        border: none;
+    }
+}
+/* Footer tingss */
+    .site-footer
+    {
+    background-color: linear-gradient();
+    font-size:8px;
+    text-align: center;
+    color:#737373;
+    justify-content: center;
+    align-items: center;
+    }
+    .site-footer hr
+    {
+    border-top-color:#bbb;
+    opacity:0.5
+    }
+    .site-footer hr.small
+    {
+    margin:20px 0
+    }
+    .site-footer h6
+    {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+    }
+    .site-footer a
+    {
+    color:#737373;
+    }
+    .site-footer a:hover
+    {
+    color:#3366cc;
+    text-decoration:none;
+    }
+    .footer-links
+    {
+    padding-left:0;
+    list-style:none
+    }
+    .footer-links li
+    {
+    display:block
+    }
+    .footer-links a
+    {
+    color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+    color:#3366cc;
+    text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+    display:inline-block
+    }
+    .site-footer .social-icons
+    {
+    text-align:right
+    }
+    .site-footer .social-icons a
+    {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+    }
+    .copyright-text
+    {
+    margin:0
+    }
+    @media (max-width:991px)
+    {
+    .site-footer [class^=col-]
+    {
+        margin-bottom:30px
+    }
+    }
+    @media (max-width:767px)
+    {
+    .site-footer
+    {
+        padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+        text-align:center
+    }
+    }
+    .social-icons
+    {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+    }
+    .social-icons li
+    {
+    display:inline-block;
+    margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+    }
+    .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+    color:#fff;
+    background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+    background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+    background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+    background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+    background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+    .social-icons li.title
+    {
+        display:block;
+        margin-right:0;
+        font-weight:600
+    }
+    }
