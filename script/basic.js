@@ -86,9 +86,9 @@ function loadSmallPage(page, pageElement) {
 
 	$(window).bind('keydown', function(e){
 	if (e.keyCode==37)
-	$('#flipbook').turn('previous');
+	$(this).turn('previous');
 	else if (e.keyCode==39)
-	$('#flipbook').turn('next');
+	$(this).turn('next');
 });
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
