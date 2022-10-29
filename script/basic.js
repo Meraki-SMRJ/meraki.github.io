@@ -84,7 +84,12 @@ function loadSmallPage(page, pageElement) {
 	img.attr('src', 'pages/' + page + '.jpg');
 }
 
-
+	$(window).bind('keydown', function(e){
+	if (e.keyCode==37)
+	$('#flipbook').turn('previous');
+	else if (e.keyCode==39)
+	$('#flipbook').turn('next');
+});
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
 function isChrome() {
