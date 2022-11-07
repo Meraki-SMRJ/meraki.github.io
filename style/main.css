@@ -53,7 +53,7 @@ header .Toggle img {
     min-height: 100vh;
     margin: 25px auto;
     min-width: 100%;
-    padding: 0 30px;
+    padding: 0 50px;
     background: linear-gradient();
     background-position: center;
     background-size: cover;
@@ -385,7 +385,7 @@ header .Toggle img {
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
