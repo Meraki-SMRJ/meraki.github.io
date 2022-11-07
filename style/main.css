@@ -195,31 +195,6 @@ header .Toggle img {
     transform: scale(0.6);
 }
 
-.Slide {
-    position: relative;
-    width: 120px;
-    /* 5:2 hai yeh */
-    height: 80px;
-    background: url(/assets/fest_logo.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: fest_logo 25s linear infinite;
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
-}
-
-@keyframes fest_logo {
-
-    0%,
-    100% {
-        background-position: top;
-    }
-
-    50% {
-        background-position: bottom;
-    }
-}
-
 .Teaser {
     position: fixed;
     top: 50%;
